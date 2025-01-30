@@ -30,17 +30,7 @@ const Index = () => {
         </div>
       </nav>
       <div className="card-container1">
-        {/* <Link to="/instructions"><IndexpageCard/></Link>
-    <Link to="/quiz/2"><IndexpageCard/></Link>
-    <Link to="/quiz/3"><IndexpageCard/></Link> */}
-
-        <div className="desc-abt-quiz">
-          <h2 className="desc-heading">
-            Where knowledge meets fun, test your wits and learn something new!
-          </h2>
-          <p className="desc-text">Attempt Any Quiz</p>
-        </div>
-        <div className="cards1">
+      <div className="cards1">
           <Link to="/quiz/instructions/0">
             <IndexpageCard
               image="./react.jpg"
@@ -56,6 +46,14 @@ const Index = () => {
             />
           </Link>
         </div>
+
+        <div className="desc-abt-quiz">
+          <h2 className="desc-heading">
+            Where knowledge meets fun, test your wits and learn something new!
+          </h2>
+          <p className="desc-text">Attempt Any Quiz</p>
+        </div>
+      
       </div>
       ;
     </div>
