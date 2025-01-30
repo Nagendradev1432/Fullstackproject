@@ -85,3 +85,48 @@ nav{
  cursor: pointer;
 
   }
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .index-img {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quiz-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .quiz-text {
+        font-size: 20px;
+    }
+
+    .index-logout {
+        font-size: 12px;
+        flex-direction: column;
+    }
+
+    .log {
+        padding: 5px;
+    }
+
+    .card-container1 {
+        padding: 10px;
+    }
+
+    .cards1 {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .desc-abt-quiz {
+        width: 100%;
+        font-size: 16px;
+    }
+}
