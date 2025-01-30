@@ -14,7 +14,7 @@ const LoginForm = () => {
       details["username"]='test1'
       details["password"]='123'
 
-      let res = await axios.post("http://localhost:5000/user/login",details)
+      let res = await axios.post("https://fullstackproject-ft5k.onrender.com/user/login",details)
       console.log(res.data,"res")
       setUser(res.data.token)
       console.log("usernamerrrrrr",res.data.username)
@@ -42,7 +42,7 @@ const LoginForm = () => {
       details["username"]=event.target.username.value;
       details["password"]=event.target.password.value;
 
-      let res = await axios.post("http://localhost:5000/user/login",details)
+      let res = await axios.post("https://fullstackproject-ft5k.onrender.com/user/login",details)
       console.log(res.data,"res")
       setUser(res.data.token)
       console.log("usernamerrrrrr",res.data.username)

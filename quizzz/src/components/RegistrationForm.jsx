@@ -12,7 +12,7 @@ const RegistrationForm = () => {
     user["phone"] = event.target.phone.value;
     user["password"] = event.target.password.value;
     console.log(user,"userrrrr")
-    let res=await axios.post("http://localhost:5000/user/register",user)
+    let res=await axios.post("https://fullstackproject-ft5k.onrender.com/user/register",user)
     // console.log(res.data,"res",event.target.username)
     // let users = localStorage.getItem("users")
     //   ? JSON.parse(localStorage.getItem("users"))

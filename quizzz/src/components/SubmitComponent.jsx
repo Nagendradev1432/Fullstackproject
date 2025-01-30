@@ -14,7 +14,7 @@ const SubmitComponent = () => {
   const TestSubmit=async(x)=>{
     console.log("xxxxxxeeeeeeeeeeeeeeeeexxxxxxxxxxxxxxxxxx",x)
     try {
-      let t= await axios.post("http://localhost:5000/result/",x, {
+      let t= await axios.post("https://fullstackproject-ft5k.onrender.com/result/",x, {
         headers: {
             'authorization': `Bearer ${user}`
         }

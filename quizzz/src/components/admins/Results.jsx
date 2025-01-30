@@ -17,7 +17,7 @@ const Results = () => {
 
       try {
        
-      let t= await axios.get("http://localhost:5000/result/gettotaldata", {
+      let t= await axios.get("https://fullstackproject-ft5k.onrender.com/result/gettotaldata", {
         headers: {
             'authorization': `Bearer ${user}`
         }

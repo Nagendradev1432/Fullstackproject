@@ -11,7 +11,7 @@ const Editpopup = ({ onClose, fetcheddata, refIndex, setTotalInfo,Handlefetch })
   const HandleEdit = async () => {
     try {
       let t = await axios.put(
-        "http://localhost:5000/result/update",
+        "https://fullstackproject-ft5k.onrender.com/result/update",
         { ...fetcheddata[refIndex], username: u, obtainedmarks: o },
         {
           headers: {

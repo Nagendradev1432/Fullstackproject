@@ -9,7 +9,7 @@ const Deletepop = ({onClose,fetcheddata,refIndex,  setTotalInfo,Handlefetch}) =>
     console.log(user,"userrrrrrrrrr")
     const HandleDelete=async()=>{
         try {
-            let t=await axios.delete("http://localhost:5000/result/delete",{data:fetcheddata[refIndex],
+            let t=await axios.delete("https://fullstackproject-ft5k.onrender.com/result/delete",{data:fetcheddata[refIndex],
                 headers: {
                     'authorization': `Bearer ${user}`
                 }
