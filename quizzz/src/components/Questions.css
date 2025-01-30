@@ -1,0 +1,21 @@
+.options-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    width: 1000px;
+
+}
+.question{
+    padding: 2px;
+}
+.option-btn{
+    background-color:rgb(46, 127, 241);
+    border: none;
+    text-align:center;
+    padding: 5px;
+    border-radius: 5px;
+    /* color: black; */
+    color: white;
+    width: 100%;
+}
