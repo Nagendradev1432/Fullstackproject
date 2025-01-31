@@ -13,7 +13,6 @@ const Index = () => {
     console.log("login useffect")
   },[])
   return (
-    
     <div className="zoom-in">
       <nav>
         <div className="index-img">

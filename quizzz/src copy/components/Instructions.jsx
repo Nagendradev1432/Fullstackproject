@@ -26,7 +26,7 @@ function Instructions({ closeModal, isModal }) {
   };
 
   return (
-    <div className="bg-color">
+    <div>
       <div className="close-button">
         {isModal && (
           <button onClick={closeModal}>

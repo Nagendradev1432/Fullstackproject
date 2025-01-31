@@ -9,11 +9,9 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(90deg,rgba(2,0,.6,1) 0%,rgba(9,9,121,1) 35%,rgba(0,212,255,1));
   }
   .Container-heading{
     text-align: center;
-    color: #efc1c1;
   }
   .form {
     display: flex;
@@ -60,5 +58,4 @@
   border-radius: 3px;
   padding: 10px;
   cursor: pointer;
-  border-radius: 30px;
 }
