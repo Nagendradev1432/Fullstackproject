@@ -139,7 +139,7 @@ nav{
     }
 }
 
-@media(max-width:320px){
+@media(max-width:420px){
     .index-img{
         margin-left: -194px;
     }
