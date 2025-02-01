@@ -188,11 +188,11 @@ const Quiz = () => {
     setAnswerData({...optionStore,[s]:[...t]});
     // setOptionStore({...optionStore,[s]:[...optionStore[s],option]})
     setDisvalue("");
-    if (s == "A") {
+    if (s === "A") {
       setS("B");
       setN(0);
       setSecDisable([ "white","black", "white"]);
-    } else if (s == "B") {
+    } else if (s === "B") {
       setS("C");
       setN(0);
       setSecDisable(["white", "white", "black"]);
@@ -291,7 +291,7 @@ const Quiz = () => {
   });
   const HandleMark = () => {
     let t = [...markStore[s]];
-    t[n] == 1 ? (t[n] = 0) : (t[n] = 1);
+    t[n] === 1 ? (t[n] = 0) : (t[n] = 1);
     console.log(
       { ...markStore, [s]: [...t] },
       "markuppppppppppppppppppppppppppppppppp"
@@ -424,14 +424,14 @@ const Quiz = () => {
           />
         </div>
         {/* *******************************************************************************************8 */}
-        <div className="question-numbers">
+        <div className="question-numbers ">
           <button className="section-heading-btn">section-{s}</button>
           <Divider />
           <div className="numbers">
             {Data1[id1][`section${s}`].map((item, index) =>
-              optionStore[s][index] == undefined ||
-              optionStore[s][index] == " " ? (
-                markStore[s][index] == 1 ? (
+              optionStore[s][index] === undefined ||
+              optionStore[s][index] === " " ? (
+                markStore[s][index] === 1 ? (
                   <button
                     className="number-btn2"
                     key={index}
@@ -448,7 +448,7 @@ const Quiz = () => {
                     {index + 1}
                   </button>
                 )
-              ) : markStore[s][index] == 1 ? (
+              ) : markStore[s][index] === 1 ? (
                 <button
                   className="number-btn2"
                   key={index}

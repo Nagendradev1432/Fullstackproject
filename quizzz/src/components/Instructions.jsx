@@ -29,8 +29,8 @@ function Instructions({ closeModal, isModal }) {
     <div className="bg-color">
       <div className="close-button">
         {isModal && (
-          <button onClick={closeModal}>
-            <ion-icon name="close-outline"></ion-icon>
+          <button onClick={closeModal} className="removeicon">
+            <ion-icon  name="close-outline"></ion-icon>
           </button>
         )}
       </div>

@@ -1,8 +1,8 @@
 .options-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     width: 90%; /* Adjusts width to 90% of the parent container */
     max-width: 1000px; /* Ensures it doesn't exceed 1000px on larger screens */
     margin: 0 auto; /* Centers the container */

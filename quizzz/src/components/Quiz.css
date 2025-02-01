@@ -13,10 +13,11 @@ body {
     max-width: 800px;
     margin: 20px auto;
     padding: 15px;
-    background: #ffffff;
+    /* background: #ffffff; */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
+    
   }
   
   /* Quiz Layout (Stacked for Mobile) */
@@ -117,6 +118,7 @@ body {
     padding: 15px;
     border-radius: 5px;
     margin-top: 10px;
+    text-align: center;
   }
   
   /* Question Numbers */
@@ -125,19 +127,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    /* padding: 10px; */
     border: 1px solid rgb(14, 12, 12);
     border-radius: 5px;
-    width: 100%;
+    /* width: 100vw; */
   }
   
   /* Number Buttons */
   .numbers {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    display: flex;
+    /* grid-template-columns: repeat(5, 1fr); */
+    /* gap: 10px; */
+    justify-content: center;
+    align-items: center;
     padding: 10px;
-    width: 100%;
+    gap: 40px;
+    margin-left: 10px;
+    /* width: 100%; */
   }
   
   .number-btn,
@@ -189,7 +195,7 @@ body {
       width: 100%;
       padding: 12px;
     }
-  
+    
     .quiz {
       padding: 10px;
     }
@@ -221,7 +227,8 @@ body {
     }
   
     .numbers {
-      grid-template-columns: repeat(4, 1fr);
+      /* grid-template-rows: (3, 1fr); */
+      display: flex;
       gap: 8px;
     }
   
@@ -236,23 +243,26 @@ body {
   /* Extra Small Screens */
   @media screen and ( max-width: 320px) {
     .quiz-container {
-      width: 100%;
+      width: 70%;
     }
   
     .quiz-heading {
       font-size: 1.2rem;
     }
+    /* .question-numbers{
+      width: 90%;
+    } */
   
     .Instruction-btn,
     .section-btn {
-      width: 100%;
+      width: 92%;
       padding: 12px;
       font-size: 1rem;
       align-items: center;
     }
   
     .numbers {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows:(3, 1fr);
     }
   
     .number-btn,
@@ -263,7 +273,7 @@ body {
     }
   
     .section-heading-btn {
-      width: 100%;
+      width: 96%;
       font-size: 12px;
     }
   }

@@ -24,10 +24,10 @@ const Index = () => {
         </div>
         
         <div className="index-logout">
-          <h2>Logout</h2>
-          <button className="log" onClick={()=>{
+        
+          <img onClick={()=>{
             localStorage.removeItem("token")
-            setUser(null)}}><ion-icon name="log-out-outline"  size="small"></ion-icon></button>
+            setUser(null)}} className="log-outimage" src="user-logout.png"/>
         </div>
       </nav>
       <div className="card-container1">

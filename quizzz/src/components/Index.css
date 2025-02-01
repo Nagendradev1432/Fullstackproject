@@ -1,4 +1,9 @@
-
+.log-outimage{
+    height: 60px;
+    width: 70px;
+    cursor: pointer;
+    border: none;
+}
 
 .card{
     /* display: grid;
@@ -46,7 +51,7 @@ nav{
     align-items: center;
     justify-content: space-around;
     gap:5px;
-    color: black;
+    /* color: black; */
     /* background-color: black; */
 }
 
@@ -89,7 +94,7 @@ nav{
 
   }
 
-@media (max-width: 480px) {
+@media (max-width: 720px) {
     nav {
         flex-direction: column;
         padding: 15px;
@@ -133,3 +138,24 @@ nav{
         font-size: 16px;
     }
 }
+
+@media(max-width:320px){
+    .index-img{
+        margin-left: -194px;
+    }
+    .index-logout{
+        margin-left: 220px;
+        margin-top: -80px;
+
+    }
+    .log-outimage{
+        margin-top: 18%;
+        width:51px;
+        height: 52px;
+    }
+    .quiz-text{
+        font-size: 15px;
+    }
+}
+
+
