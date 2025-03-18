@@ -3,76 +3,81 @@ import "./LoginForm.css"; // Import the CSS file for styling
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import axios from "axios";
+
 const LoginForm = () => {
   const navigate = useNavigate();
-  const { setUser,setUsername,username,user } = useContext(AuthContext);
-  const handleGuest=async()=>{
-    console.log('bweiubfiew')
+  const { setUser, setUsername, username, user } = useContext(AuthContext);
+  
+  const handleGuest = async () => {
     try {
-      let details={}
-     
-      details["username"]='test1'
-      details["password"]='123'
+      let details = {};
+      details["username"] = "test1";
+      details["password"] = "123";
 
-      let res = await axios.post("https://fullstackproject-ft5k.onrender.com/user/login",details)
-      console.log(res.data,"res")
-      setUser(res.data.token)
-      console.log("usernamerrrrrr",res.data.username)
-      setUsername(res.data.username)
-      localStorage.setItem("token",res.data.token)
-      if(!res.data.token) return alert(" No token")
-      if(res.data.role=="user"){
+      let res = await axios.post("https://fullstackproject-ft5k.onrender.com/user/login", details);
+      console.log(res.data, "res");
+      setUser(res.data.token);
+      setUsername(res.data.username);
+      localStorage.setItem("token", res.data.token);
+      if (!res.data.token) return alert(" No token");
+      if (res.data.role == "user") {
         navigate("/");
+      } else {
+        navigate("/resultspage");
       }
-      else{
-        navigate("/resultspage")
-      }
-   
-      
-      
     } catch (error) {
-      console.log("errrrrrrrrrrrrrrrrrrrrrr")
+      console.log("errrrrrrrrrrrrrrrrrrrrrr");
     }
-  }
-  const handleSubmit = async(event) => {
+  };
+
+  const handleGuestAdmin = async () => {
+    try {
+      let details = {};
+      details["username"] = "Nagendra";
+      details["password"] = "1234";
+
+      let res = await axios.post("https://fullstackproject-ft5k.onrender.com/user/login", details);
+      console.log(res.data, "res");
+      setUser(res.data.token);
+      setUsername(res.data.username);
+      localStorage.setItem("token", res.data.token);
+      if (!res.data.token) return alert(" No token");
+      if (res.data.role == "user") {
+        navigate("/");
+      } else {
+        navigate("/resultspage");
+      }
+    } catch (error) {
+      console.log("errrrrrrrrrrrrrrrrrrrrrr");
+    }
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      let details={}
-      console.log(event.target.username.value);
-      details["username"]=event.target.username.value;
-      details["password"]=event.target.password.value;
+      let details = {};
+      details["username"] = event.target.username.value;
+      details["password"] = event.target.password.value;
 
-      let res = await axios.post("https://fullstackproject-ft5k.onrender.com/user/login",details)
-      console.log(res.data,"res")
-      setUser(res.data.token)
-      console.log("usernamerrrrrr",res.data.username)
-      setUsername(res.data.username)
-      localStorage.setItem("token",res.data.token)
-      if(!res.data.token) return alert(" No token")
-      if(res.data.role=="user"){
+      let res = await axios.post("https://fullstackproject-ft5k.onrender.com/user/login", details);
+      console.log(res.data, "res");
+      setUser(res.data.token);
+      setUsername(res.data.username);
+      localStorage.setItem("token", res.data.token);
+      if (!res.data.token) return alert(" No token");
+      if (res.data.role == "user") {
         navigate("/");
+      } else {
+        navigate("/resultspage");
       }
-      else{
-        navigate("/resultspage")
-      }
-   
-      
-      
     } catch (error) {
-      console.log("errrrrrrrrrrrrrrrrrrrrrr")
+      console.log("errrrrrrrrrrrrrrrrrrrrrr");
     }
-   
-
   };
-  console.log("outer  usernamerrrrrr",username)
-  useEffect(()=>{
-    // alert("tokennnn")
-    // if(localStorage.getItem("token")){
-      
-    //   setUser(localStorage.getItem("token"))
-    // }
-    console.log("login useffect")
-  },[])
+
+  useEffect(() => {
+    console.log("login useffect");
+  }, []);
 
   return (
     <div className="container">
@@ -90,10 +95,10 @@ const LoginForm = () => {
           Login
         </button>
       </form>
-      <button onClick={()=>handleGuest()} className="guest_btn">Guest Login</button>
+      <button onClick={handleGuest} className="guest_btn">Guest Login</button>
+      <button onClick={handleGuestAdmin} className="guest_btn">Guest Admin Login</button>
       <p className="Container-heading">
-        Don't have an account already ? Register{" "}
-        <Link to="/register">here</Link>
+        Don't have an account already ? Register <Link to="/register">here</Link>
       </p>
     </div>
   );
