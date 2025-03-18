@@ -47,6 +47,9 @@ const Login=async(req,res)=>{
                 // res.send({msg:"Logged In",token:generateJwt(user._id)})
                 // res.send(user)
                 res.send({msg:"login sucessfully",token:generateJwt(user._id),username:username,role:"admin"})
+                // console.log(password);
+                // console.log(username);
+
             }else{
                 res.send({msg:"Enter Valid and password"})
             }
@@ -56,6 +59,7 @@ const Login=async(req,res)=>{
                 // res.send({msg:"Logged In",token:generateJwt(user._id)})
                 // res.send(user)
                 res.send({msg:"login sucessfully",token:generateJwt(user._id),username:username,role:"user"})
+                
             }else{
                 res.send({msg:"Enter Valid and password"})
             }

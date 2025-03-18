@@ -14,7 +14,9 @@ const PracticeModal2 = ({ passingdata,HandleMod }) => {
   const {id,answerData}=useContext(AuthContext)
   const [answers, setAnswers] = useState({ ...answerData });
    const [total,setTotal]=useState(0)
-   const [attemptedtotal,setAttemptedTotal]=useState(0)
+   const [setAttemptedTotal,attemptedtotal]=useState(0)
+   console.log("attemptedtotal",attemptedtotal)
+   console.log("attemptedtotal",setAttemptedTotal)
   const [answerscount,setAnswerscount]=useState({
     "A":"",
     "B":"",
