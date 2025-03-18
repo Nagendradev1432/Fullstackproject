@@ -96,7 +96,7 @@ const LoginForm = () => {
         </button>
       </form>
       <button onClick={handleGuest} className="guest_btn">Guest Login</button>
-      <button onClick={handleGuestAdmin} className="guest_btn">Guest Admin Login</button>
+      <button onClick={handleGuestAdmin} className="guestadmin_btn">Guest Admin Login</button>
       <p className="Container-heading">
         Don't have an account already ? Register <Link to="/register">here</Link>
       </p>

@@ -90,17 +90,16 @@ const Results = () => {
         <button className={`result-btn ${active==0?"act":""}`} onClick={()=>{
           setActive(0)
           setIndex(0)}}>React Quiz Results</button>
-        <hr  style={{width:"1rem"}}/>
-        <button className={`result-btn ${active==1?"act":""}`} onClick={()=>{
-          setActive(1)
-          setIndex(1)}}>Instruction Quiz Results</button>
-
       </div> 
       <div className="logout-div">
-        <h3>Logout</h3>
-      <button className="logout-btn" onClick={()=>{
+      {/* <button  onClick={()=>{
             localStorage.removeItem("token")
-            setUser(null)}}><ion-icon name="log-out-outline"  size="small"></ion-icon></button>
+            setUser(null)}}></button> */}
+            <div className="logout-btn">
+        <img onClick={()=>{
+          localStorage.removeItem("token")
+          setUser(null)}} className="log-outimage" src="user-logout.png"/>
+      </div>
       </div>
       
     </div>
